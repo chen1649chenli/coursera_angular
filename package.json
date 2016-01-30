@@ -2,7 +2,7 @@
   "name": "coursera_angular",
   "private": true,
   "devDependencies": {
-
+    "gulp-ng-annotate": "^1.1.0"
   },
   "engines": {
     "node": ">=0.10.0"
