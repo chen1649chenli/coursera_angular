@@ -2,6 +2,12 @@
     <div class="container" ng-controller="DishDetailController">
         <div class="row row-content">
           <div class="col-xs-12">
+              <button class="btn btn-xs btn-primary pull-right"
+                  type="button" ui-sref="app.menu">
+                  Back to Menu
+              </button>
+         <div class="media">
+          <div class="col-xs-12">
             <div class="media">
                 <div class="media-left media-middle">
                       <a href="#">
@@ -17,9 +23,8 @@
                       <p>{{dish.description}}</p>
                 </div>
             </div>
-
-            </div>
-                <div class="col-xs-9 col-xs-offset-1">
+         </div>
+        <div class="col-xs-9 col-xs-offset-1">
                     <h4>Customer Comments <small>Sort by <input ng-model="sortBy"></small></h4>
                     <ul class="list-unstyled" ng-repeat="comment in dish.comments | orderBy:sortBy">
                       <li><blockquote>
@@ -30,7 +35,7 @@
                             </footer>
                       </blockquote></li>
                     </ul>
-                </div>
+        </div>
     </div>
     <!--form stats here-->
     <div class="col-xs-9 col-xs-offset-1" ng-controller="DishCommentController">
