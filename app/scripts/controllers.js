@@ -79,5 +79,20 @@ angular.module('confusionApp')
                               $scope.mycomment = {rating:5, comment:"", author:"", date:""};
                           };
                       }])
+// implement the About Controller here
+ .controller('AboutController', ['$scope', 'corporateFactory',function($scope,corporateFactory) {
 
-              ;
+                          $scope.leaders = corporateFactory.getLeaders();
+
+                      }])
+                      // implement the IndexController Controller here
+  .controller('IndexController', ['$scope', 'corporateFactory','menuFactory',function($scope,corporateFactory,menuFactory) {
+
+                        $scope.showDish = true;
+                        $scope.message="Loading ...";
+                        $scope.dish = menuFactory.getDish(0);
+
+                        $scope.promotion = menuFactory.getPromotion(0);
+                        $scope.chef = corporateFactory.getLeader(3);
+                      }])
+;
